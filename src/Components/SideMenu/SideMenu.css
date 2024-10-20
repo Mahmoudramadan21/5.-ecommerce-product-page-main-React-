@@ -1,0 +1,54 @@
+.side-menu {
+    padding: 32px 15px;
+    width: 65%;
+    height: 100vh;
+    background-color: white;
+    box-shadow: rgb(0, 0, 0, 0.4) 40vw 0px 0px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    left: -110%;
+    transition: 0.3s;
+    z-index: 2;
+}
+
+.side-menu.open {
+    left: 0;
+}
+
+.side-menu .close-menu {
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+
+.side-menu .links li a {
+    display: block;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+    color: var(--Dark-grayish-blue);
+    font-size: 17px;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+    position: relative;
+    transition: 0.3s;
+}
+
+.side-menu .links li a:hover {
+    padding-left: 10px;
+}
+
+.side-menu .links li a::after {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 2px;
+    background-color: var(--Orange);
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease;
+}
+
+.side-menu .links li a:hover::after {
+    margin-left: 10px;
+    width: 60%;
+}

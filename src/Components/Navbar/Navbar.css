@@ -1,0 +1,115 @@
+nav .container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--Grayish-blue);
+}
+
+nav .logo-links-wrapper,
+nav .logo-links-wrapper .links,
+nav .cart-avatar-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+nav .logo-links-wrapper .links {
+    gap: 20px;
+}
+
+nav .logo-links-wrapper .links a {
+    color: var(--Dark-grayish-blue);
+    padding-bottom: 60px;
+    position: relative;
+    transition: 0.3s;
+}
+
+
+nav .logo-links-wrapper .links a:hover {
+    color: black;
+}
+
+nav .logo-links-wrapper .links a:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 50%;
+    bottom: 0;
+    background-color: var(--Orange);
+    transition: transform 0.3s;
+    transform: translateX(-50%) scaleX(0);
+}
+
+nav .logo-links-wrapper .links a:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+nav .cart-avatar-wrapper {
+    gap: 40px;
+}
+
+nav .cart-icon {
+    position: relative;
+    cursor: pointer;
+}
+
+nav .cart-length {
+    position: absolute;
+    right: -5px;
+    top: -7px;
+    background-color: var(--Orange);
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 1px 7px;
+    border-radius: 7px;
+}
+
+nav .avatar img {
+    cursor: pointer;
+    width: 50px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+nav .avatar img:hover {
+    border: 2px solid var(--Orange);
+}
+
+@media (min-width: 768px) {
+    nav .menu {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    nav .container {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border: none
+    }
+
+    ;
+
+    nav .menu {
+        cursor: pointer;
+    }
+
+    nav .logo-links-wrapper .links {
+        display: none;
+    }
+
+    nav .logo-links-wrapper,
+    nav .cart-avatar-wrapper {
+        gap: 20px;
+    }
+
+    nav .avatar img {
+        margin-left: 10px;
+        width: 40px;
+    }
+}

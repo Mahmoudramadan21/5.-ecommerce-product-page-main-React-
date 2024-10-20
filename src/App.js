@@ -1,24 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './Components/Navbar/Navbar';
+import '@fontsource/kumbh-sans/400.css';
+import '@fontsource/kumbh-sans/500.css';
+import '@fontsource/kumbh-sans/600.css';
+import '@fontsource/kumbh-sans/700.css';
+import ProductDetail from './Components/ProductDetail/ProductDetail';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      <ProductDetail />
+    </>
   );
 }
 
