@@ -10,8 +10,6 @@ function Cart() {
     const { cartItems } = useSelector(state => state.cart);
     const dispatch = useDispatch();
 
-    const totalPrice = cartItems.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2)
-
     return (
         <div className="cart">
             <h3>Cart</h3>
